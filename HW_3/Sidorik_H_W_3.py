@@ -1,6 +1,6 @@
 # MARK: - Public methods
 
-def is__not_numbers(list):
+def is_not_numbers(list):
             for value in list:
                 if not isinstance(value, (int, float)):
                     return True
