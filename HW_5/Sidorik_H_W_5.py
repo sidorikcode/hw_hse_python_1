@@ -18,13 +18,10 @@ class PublisherDateFormat(Enum):
     def format(self):
         return self.value[1]
     
-
-
 class DateFormatter:
     # MARK: Public methods
     def get_date_from_str_for_publisher(self, date_str: str, for_publisher: PublisherDateFormat):     
         return datetime.strptime(date_str, for_publisher.format).date()
-
 
 dict_publishers_and_date_formats = {
      PublisherDateFormat.TheMoscowTimes: "Wednesday, October 2, 2002",
@@ -33,9 +30,6 @@ dict_publishers_and_date_formats = {
 }
 
 date_formatter = DateFormatter()
-
-
 for publisher, date_str in dict_publishers_and_date_formats.items():
     date = date_formatter.get_date_from_str_for_publisher(date_str, publisher)
-
     print(f'Дата для "{date_str}" y издателя "{publisher.name_publisher}" равна: {date}')
