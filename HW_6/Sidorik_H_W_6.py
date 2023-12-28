@@ -145,9 +145,15 @@ class Account:
         return self.__history_transaction.get_histoty_for_date(datetime.now().strftime(date_format))
     
     def get_history_for_date(self, date_str: str):
-        "Формат даты: '01.01.2001' ('%d.%m.%Yж'), метод может вернуть None"
+        """
+        Date format: '%d.%m.%Yж' ('01.01.2001'). Method can return None
+        """
+
         return self.__history_transaction.get_histoty_for_date(date_str)
     
     def get_history_for_ragne(self, start_date_str: str, end_date_srt: str):
-        "Формат даты: '01.01.2001' ('%d.%m.%Yж'), метод может вернуть None"
+        """
+        Date format: '%d.%m.%Yж' ('01.01.2001'). Method can return None
+        """
+        
         return self.__history_transaction.get_history_for_range(start_date_str, end_date_srt)
