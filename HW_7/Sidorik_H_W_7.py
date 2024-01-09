@@ -3,8 +3,7 @@ import re
 #  MARK: - Helper
 def log_result_check_validate_car_id(result: tuple):
     if result:
-        (resultt, resulttt) = result
-        print(f"Номер {resultt} валиден. Регион: {resulttt}")
+        print(f"Номер {result[0]} валиден. Регион: {result[1]}")
     else:
         print(f"Номер не валиден")
 
